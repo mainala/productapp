@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
+import { IProduct } from './product.model';
 
 @Component({
   selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  templateUrl: './products.component.html'
 })
+
 export class ProductsComponent {
 title: String = '***Products Page***';
-info: String='No of item search';
+info: String='No of item searched ';
 imageStatus:String='Show Image';
 buttonStyle:String='btn btn-success';
-userInput:String='user text';
+userInput:String='';
 showTable: Boolean = false;
-products: any[] = [  
+products: IProduct[] = [  
   {  
      "_id":"5a05dacc734d1d68d42d31f3",
      "productId":1,
