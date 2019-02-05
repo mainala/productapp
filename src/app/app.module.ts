@@ -4,11 +4,15 @@ import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { from } from 'rxjs';
+import { MyUpperPipe } from './products/myUpper.pipe';
+import { DiscountPipe } from './products/discountPipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent
+    ProductsComponent,
+    MyUpperPipe,
+    DiscountPipe
   ],
   imports: [
     BrowserModule,

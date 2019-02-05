@@ -26,17 +26,17 @@
               </th>
               <th>Name</th>
               <th>Code</th>
-              <th>Date</th>
+              <th>Date</th> 
               <th>Price</th>
             </tr>
           </thead>
           <tbody>
               <tr *ngFor="let prod of products">
                 <td><img [src]="prod.imageUrl" *ngIf="showTable"></td>
-                <td>{{prod.productName}}</td>
-                <td>{{prod.productCode}}</td>
+                <td>{{prod.productName | myUpper:'upper'}}</td>
+                <td>{{prod.productCode | myUpper:'lower'}}</td>
                 <td>{{prod.releaseDate}}</td>
-                <td>{{prod.price}}</td>
+                <td>{{prod.price | discount:0 | currency:"EUR"}}</td>
               </tr>
           </tbody>
         </table>
