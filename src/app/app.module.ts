@@ -5,19 +5,26 @@ import { AppComponent } from './app.component';
 import { observable } from 'rxjs';
 import { ProductsComponent } from './products/products.component';
 import { ProductSearchPipe } from './products/productsearchpipe.pipe';
+import { DiscountPipe } from './products/discountPipe.pipe';
+import { StarComponent } from './shared/star.component';
+import { ProductService } from './products/product.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductSearchPipe,
-    ProductsComponent
+    DiscountPipe,
+    ProductsComponent,
+    StarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ProductService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

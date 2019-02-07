@@ -10,6 +10,8 @@ export class ProductSearchPipe implements PipeTransform{
         userData = userData ? userData.toLowerCase():null;
         
          return userData ? value.filter((product:IProduct)=>
-              (product.productName.toLowerCase().indexOf(userData) !== -1 )): value
+              (product.productName.toLowerCase().indexOf(userData) !== -1 ) || 
+                product.productCode.toLowerCase().indexOf(userData) !== -1              
+              ): value
          }
 }
