@@ -36,7 +36,7 @@ import { NotFoundComponent } from './shared/NotFound.Component';
       {path:'products/:id', component:ProductDetailComponent},
       {path:'orders', component:OrderComponent},
       {path: 'home', component:HomeComponent},
-      {path: '', redirectTo:'home', component:ProductsComponent, pathMatch:'full'},
+      {path: '', redirectTo:'home', pathMatch:'full'},
       {path: '**', component:NotFoundComponent}
     ])
   ],
