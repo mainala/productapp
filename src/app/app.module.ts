@@ -14,6 +14,7 @@ import {  OrderComponent } from './orders/order.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './products/product-detail.component';
 import { NotFoundComponent } from './shared/NotFound.Component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { NotFoundComponent } from './shared/NotFound.Component';
       {path: 'home', component:HomeComponent},
       {path: '', redirectTo:'home', pathMatch:'full'},
       {path: '**', component:NotFoundComponent}
-    ])
+    ]),
+    HttpClientModule
   ],
   providers: [
     ProductService

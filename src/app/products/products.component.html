@@ -36,7 +36,7 @@
               <tr *ngFor="let prod of products | productSearch:userInput">
                 <td><img [src]="prod.imageUrl" *ngIf="showTable" style="height:100px; width: 100px;"></td>
                 <td [routerLink]="['/products', prod.productId]"
-                    [queryParams]="{name:prod.productName, description:prod.description, image:prod.imageUrl}">{{prod.productName}}</td>
+                    >{{prod.productName}}</td>
                 <td>{{prod.productCode}}</td>
                 <td>{{prod.releaseDate}}</td>
                 <td [ngStyle]="{'background-color':prod.price<20?'tomato':'teal',
